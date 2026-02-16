@@ -78,7 +78,7 @@ const config = {
             'aria-label': 'Documentation Repo',
           },
           {
-            href: 'https://github.com/mighty-stitch/smart-house-wiki',
+            href: 'https://github.com/mighty-stitch/smart-house',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'Code Repository',

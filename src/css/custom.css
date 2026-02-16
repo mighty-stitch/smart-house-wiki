@@ -44,7 +44,8 @@
   display: inline-block;
   height: 22px;
   width: 22px;
-  background: url("https://unpkg.com/simple-icons@v9/icons/book.svg") no-repeat;
+  background: url("https://unpkg.com/lucide-static@latest/icons/book.svg") no-repeat;
   background-size: contain;
 }
+
 

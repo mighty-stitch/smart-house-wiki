@@ -1,41 +1,65 @@
-# Website
+# Smart Home Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This repository contains the official documentation for my home automation system.
 
-## Installation
+The purpose of this project is to clearly explain how the system works —
+what it includes, why certain tools were chosen, and how everything connects —
+without unnecessary technical complexity.
 
-```bash
-yarn
-```
+---
 
-## Local Development
+## 🌐 Live Website
 
-```bash
-yarn start
-```
+View the full documentation here:
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+👉 https://mighty-stitch.github.io/smart-house-wiki
 
-## Build
+---
 
-```bash
-yarn build
-```
+## 📖 What This Documentation Covers
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+- System overview  
+- Architecture  
+- Devices and hardware  
+- Software stack  
+- Setup philosophy  
+- How-to guides  
+- Troubleshooting  
 
-## Deployment
+This documentation is designed to give a clear, high-level understanding of the system.
 
-Using SSH:
+---
 
-```bash
-USE_SSH=true yarn deploy
-```
+## 🚀 How This Repository Works
 
-Not using SSH:
+This site is built using **Docusaurus**.
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
+Workflow is simple:
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+1. Make changes locally.
+2. Commit and push to the main branch.
+3. The site automatically builds and deploys.
+4. The live website updates.
+
+No manual deployment required.
+
+---
+
+## 📚 Built With
+
+- Docusaurus  
+- Home Assistant  
+- ESPHome  
+- Shelly devices  
+
+Docusaurus documentation:  
+https://docusaurus.io/docs
+
+---
+
+## 🐙 Related Repositories
+
+- Code Repository: https://mighty-stitch.github.io/smart-house
+- Documentation Repository: https://mighty-stitch.github.io/smart-house-wiki/
+
+
