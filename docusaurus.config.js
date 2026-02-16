@@ -72,6 +72,12 @@ const config = {
         },
         items: [
           {
+            type: 'doc',
+            docId: 'index',
+            position: 'left',
+            label: 'Home',
+          },
+          {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
@@ -88,11 +94,11 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Documenation',
+            title: 'Documentation',
             items: [
               {
                 label: 'Home',
-                to: '/home',
+                to: '/',
               },
             ],
           },

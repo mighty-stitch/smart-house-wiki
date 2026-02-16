@@ -1,6 +1,5 @@
 ---
-id: home
-slug: /
+id: index
 title: Welcome Home
 ---
 
