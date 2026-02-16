@@ -4,7 +4,7 @@ sidebar_position: 1
 title: Welcome Home
 ---
 
-# The Homeowner’s Encyclopedia: Lighting Systems
+# Welcome
 
 This guide contains everything you need to understand how the lightbulbs turn on in this rather unconventional house. Whether something breaks, becomes outdated and needs replacement, or you simply want to **"flex"** by using the existing features to make the house smarter and more convenient with new automations, this is your manual.
 
@@ -27,7 +27,7 @@ Today, the house no longer relies on a single proprietary "brain." Instead, the 
 
 ---
 
-## Explain It Like I'm Five (ELI5)
+## Explain It Like I'm Five
 
 Too technical? Here is the simplified version
 
