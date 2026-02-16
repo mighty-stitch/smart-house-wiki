@@ -1,5 +1,6 @@
 ---
 id: home
+slug: /
 title: Welcome Home
 ---
 
