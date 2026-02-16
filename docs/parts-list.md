@@ -1,5 +1,6 @@
 ---
 id: parts-list
+sidebar_position: 6
 title: Parts List / Inventory
 ---
 

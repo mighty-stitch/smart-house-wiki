@@ -1,5 +1,6 @@
 ---
 id: faqs
+sidebar_position: 7
 title: FAQs
 ---
 
