@@ -28,3 +28,23 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+.header-github-link::before {
+  content: "";
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  background: url("https://unpkg.com/simple-icons@v9/icons/github.svg") no-repeat;
+  background-size: contain;
+}
+
+.header-docs-link::before {
+  content: "";
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  background: url("https://unpkg.com/simple-icons@v9/icons/book.svg") no-repeat;
+  background-size: contain;
+}
+

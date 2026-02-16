@@ -72,38 +72,22 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'index',
-            position: 'left',
-            label: 'Home',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Documentation',
+            href: 'https://github.com/mighty-stitch/smart-house-wiki',
+            position: 'right',
+            className: 'header-docs-link',
+            'aria-label': 'Documentation Repo',
           },
           {
             href: 'https://github.com/mighty-stitch/smart-house-wiki',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'Code Repository',
           },
         ],
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Documentation',
-            items: [
-              {
-                label: 'Home',
-                to: '/',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Smart House`,
+        copyright: `Copyright © ${new Date().getFullYear()} Smart House by Jose Grijalva`,
       },
       prism: {
         theme: prismThemes.github,
