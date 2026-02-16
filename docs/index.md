@@ -69,4 +69,4 @@ Basically, anyone who wants to understand the house or help it work when it deci
 
 ## How to Use This Guide
 
-Start with the **[Overview](basic/overview.md)** to see how the whole house works. Then, if a light breaks or you want to add something new, you can look at the right section — it’s like a map for your smart house.
+Start with the **[Overview](basic/electrical-overview.md)** to see how the whole house works. Then, if a light breaks or you want to add something new, you can look at the right section — it’s like a map for your smart house.
