@@ -59,7 +59,7 @@ https://docusaurus.io/docs
 
 ## 🐙 Related Repositories
 
-- Code Repository: https://mighty-stitch.github.io/smart-home
-- Documentation Repository: https://mighty-stitch.github.io/smart-house-wiki/
+- Code Repository: https://mighty-stitch/smart-home
+- Documentation Repository: https://mighty-stitch/smart-house-wiki/
 
 
