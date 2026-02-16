@@ -1,6 +1,6 @@
 module.exports = {
   tutorialSidebar: [
-    'home',
+    'index',
     {
       type: 'category',
       label: 'Basic About the House',
