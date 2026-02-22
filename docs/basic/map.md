@@ -4,16 +4,10 @@ sidebar_position: 2
 title: House and Electrical Map
 ---
 
----
-id: house-electrical-map
-sidebar_position: 4
-title: House and Electrical Map
----
-
 # House and Electrical Map
 
 
-The house has around seventy different hot wires. One hot wire can power one light or a mixture of lights. In addition the house has many rooms. I had to number all the hot cable as well as name all the rooms in the house to make senses of the electrical system.
+The house has around seventy different hot wires. One hot wire can power one light or a mixture of lights. In addition the house has many rooms. I had to number all the hot cables as well as name all the rooms in the house to make senses of the electrical system.
 
 It was quite a laborious job, thankfully all is done, moving forward you can just reference the folloing diagrams and pictures to know which wire controls what.
 
@@ -21,7 +15,7 @@ It was quite a laborious job, thankfully all is done, moving forward you can jus
 
 ## The House Map
 
-To make sense of the system, I first divide the physical space into logical zones. Then I named them, based on what made sense to me. To avoid confusion, I am adding what I named each room in the map below. 
+To make sense of the system, I first divided the physical space into logical zones. Then I named them, based on what made sense to me. To avoid confusion, I am adding what I named each room in the map below. 
 
 You can call the rooms whatever you want in the future, however these are the names that are used to link the wires to a specific room. 
 
@@ -37,7 +31,7 @@ You can call the rooms whatever you want in the future, however these are the na
 
 Each cable listed below is physically tagged with a numbered sticker corresponding to the **Cable #** column. These numbers represent the "Hot" AC wires that are now connected to the smart relays.
 
-You can also also the list below in [Spreadsheet format](https://docs.google.com/spreadsheets/d/1n_0zUwem4akHZQGzYcW9seihyMPRHdoofeY7YOCWh88/edit?usp=sharing).
+You can also access the list below in [Spreadsheet format](https://docs.google.com/spreadsheets/d/1n_0zUwem4akHZQGzYcW9seihyMPRHdoofeY7YOCWh88/edit?usp=sharing).
 
 | Cable # | Light / Load Description | Room / Area |
 | :--- | :--- | :--- |
@@ -123,5 +117,5 @@ You can find more details about which cables are grouped together in the section
 ---
 
 :::caution A Note on the "Unknown"
-**Wire #68** is currently labeled as Unknown. During testing, this wire did not appear to activate any visible fixtures. It is likely a "spare" or connected to a discontinued outdoor feature. Handle with care during live testing.
+**Wire #68** is currently labeled as Unknown. During testing, this wire did not appear to activate any visible fixtures. My suspecious is that it used to be connected to a disconnected feature in the Master room.
 :::
