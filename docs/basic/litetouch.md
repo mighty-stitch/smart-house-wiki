@@ -1,5 +1,6 @@
 ---
 id: litetouch
+sidebar_position: 3
 title: How the House Used to Work (Litetouch)
 ---
 

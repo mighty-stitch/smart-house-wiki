@@ -1,6 +1,7 @@
 ---
 id: issue
-title: Overview (Shelly + HA + ESP32)
+sidebar_position: 5
+title: Issues
 ---
 
 A high-level explanation of how the current lighting system works.
