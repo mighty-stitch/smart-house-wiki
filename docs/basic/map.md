@@ -110,7 +110,6 @@ You can also access the list below in [Spreadsheet format](https://docs.google.c
 
 </div>
 
----
 
 ### Bundled Cables
 
@@ -118,7 +117,6 @@ It is important to note that while there are 70 individual wires, some have been
 
 You can find more details about which cables are grouped together in the section *How the house works now*.
 
----
 
 :::caution A Note on the "Unknown"
 **Wire #68** is currently labeled as Unknown. During testing, this wire did not appear to activate any visible fixtures. My suspecious is that it used to be connected to a disconnected feature in the Master room.

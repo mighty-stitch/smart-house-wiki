@@ -14,9 +14,9 @@ I am including specifics here on how LiteTouch wired individual light fixtures t
 
 ---
 
-## Module Documenation
+## Module/Relays Documenation
 
-The house used two different types of modules/ elays: 
+The house used two different types of modules/relays: 
 
 ### Dimmer module version 08-2100-01. 
 The 08-2100-01 is a 6-channel, phase-control dimming station designed for incandescent and magnetic low-voltage (MLV) loads.
@@ -24,7 +24,7 @@ The 08-2100-01 is a 6-channel, phase-control dimming station designed for incand
 It has 6 independent dimming outputs. With 120V AC, and it had a capacity of **20A of total aggregate load**.
 
 
-:::note
+:::info
 
 **Limitation:** These were designed primarily for incandescent and halogen bulbs. Using modern LEDs on these old modules often caused flickering because the "Dimmer" couldn't handle the low wattage of LED technology.
 
@@ -80,7 +80,7 @@ Module 4.1, 12, 13 & 14 were Relay Module (Model 08-2200-01), the rest were Dimm
 
 This table provides a comprehensive map of the legacy LiteTouch infrastructure. It identifies which circuit breaker feeds each control module and exactly which labeled cables are serviced by those modules.
 
-This information can also be viewed in [google doc format](https://docs.google.com/document/d/1wGsjkew1nIstcWlGRLiKP3U5wyWL1R3x3p7i50B45lU/edit?usp=sharing).
+This information can also be viewed in [google doc format](https://docs.google.com/document/d/1wGsjkew1nIstcWlGRLiKP3U5wyWL1R3x3p7i50B45lU/edit?usp=sharing), which is **more detailed** 
 
 
 | Module ID | Feed Breaker(s) | Cable # | Load Description |
@@ -104,11 +104,11 @@ This information can also be viewed in [google doc format](https://docs.google.c
 
 :::info Special Configuration: Module 13
 
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+Unlike the other modules which utilize a single breaker, **Module 13** is cross-wired across two breakers to handle higher current demands for the Library and Garage areas: **Breaker 26:** Services Cables 28, 29, and 30. And **Breaker 30:** Services Cables 31 and 32.
 
 :::
 
-Unlike the other modules which utilize a single breaker, **Module 13** is cross-wired across two breakers to handle higher current demands for the Library and Garage areas: **Breaker 26:** Services Cables 28, 29, and 30. And **Breaker 30:** Services Cables 31 and 32.
+
 
 ---
 
@@ -134,7 +134,7 @@ This video was taken during the teardown of the LiteTouch system. It shows the o
       boxShadow: '0 4px 8px rgba(0,0,0,0.2)'
     }}
   >
-    <source src="/img/litetouch.mp4" type="video/mp4" />
+    <source src="../../static/img/litetouch.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
   <p><i>Legacy LiteTouch Cabinet - Vertical Overview</i></p>
