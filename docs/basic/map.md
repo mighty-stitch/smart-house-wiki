@@ -33,6 +33,8 @@ Each cable listed below is physically tagged with a numbered sticker correspondi
 
 You can also access the list below in [Spreadsheet format](https://docs.google.com/spreadsheets/d/1n_0zUwem4akHZQGzYcW9seihyMPRHdoofeY7YOCWh88/edit?usp=sharing).
 
+<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+
 | Cable # | Light / Load Description | Room / Area |
 | :--- | :--- | :--- |
 | **1** | Library Eye Light | Library |
@@ -105,6 +107,8 @@ You can also access the list below in [Spreadsheet format](https://docs.google.c
 | **68** | Unknown | - |
 | **69** | Outside Gate Lights | Outdoors |
 | **70** | Master Room Terrace / Balcony | Master room|
+
+</div>
 
 ---
 

@@ -4,9 +4,11 @@ sidebar_position: 3
 title: LiteTouch
 ---
 
-# In-depth LiteTouch Wiring (Legacy Documentation)
+# In-depth LiteTouch Wiring 
 
-This page is purely for historical documentation purposes. While this information is not strictly necessary to understand how the *current* system works, it provides a vital map of the original infrastructure.
+## Legacy Documentation
+
+This page is purely for historical documentation purposes. This information is not strictly necessary to understand how the *current system works*. However, it provides a vital map of the original infrastructure.
 
 I am including specifics here on how LiteTouch wired individual light fixtures to specific modules and designated breakers. This page is intended as a reference for an electrician in the event of another major overhaul of the system; otherwise, this page can be ignored.
 
@@ -14,14 +16,19 @@ I am including specifics here on how LiteTouch wired individual light fixtures t
 
 ## Module Documenation
 
-The house used two different types of modules: 
+The house used two different types of modules/ elays: 
 
 ### Dimmer module version 08-2100-01. 
 The 08-2100-01 is a 6-channel, phase-control dimming station designed for incandescent and magnetic low-voltage (MLV) loads.
 
-It has 6 independent dimming outputs. With 120V AC, and it had a capacity of 20A of total aggregate load.
+It has 6 independent dimming outputs. With 120V AC, and it had a capacity of **20A of total aggregate load**.
 
-**Limitation:** These were designed primarily for incandescent and halogen bulbs. Using modern LEDs on these old modules often caused flickering because the "Dimmer" couldn't handle the low wattage of LED technology..
+
+:::note
+
+**Limitation:** These were designed primarily for incandescent and halogen bulbs. Using modern LEDs on these old modules often caused flickering because the "Dimmer" couldn't handle the low wattage of LED technology.
+
+:::
 
 
 ### Relay Module (Model 08-2200-01)
@@ -44,6 +51,7 @@ The other one was located, next to the Central Control Unit (Brain), in its own 
 
 The House used a total of fifteen relays, of which five were Relay Module (Model 08-2200-01), and ten were Dimmer module version 08-2100-01. Here where they were the modules were located:
 
+<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
 
 | **UPPER LEFT** | **UPPER RIGHT** |
 | :--- | :--- |
@@ -58,6 +66,8 @@ The House used a total of fifteen relays, of which five were Relay Module (Model
 | Module 13 | Module 9 |
 | Module 14 | Module 10 |
 | Power Supply | Module 11 |
+
+</div>
 
 
 Module 4.1, 12, 13 & 14 were Relay Module (Model 08-2200-01), the rest were Dimmer modules
@@ -91,12 +101,14 @@ This information can also be viewed in [google doc format](https://docs.google.c
 | **Module 13** | 26 & 30 | 28, 29, 30, 31, 32 | Library Main, Guest Outlet, Garage, Hidden Living Lights |
 | **Module 14** | 25 | 33, 34, 35, 36, 37 | Room 4 Bath, Room 4 Closet/Outlet, Master Room Outlet |
 
----
 
-### Special Configuration: Module 13
-Unlike the other modules which utilize a single 20A feed, **Module 13** is cross-wired across two breakers to handle higher current demands for the Library and Garage areas:
-* **Breaker 26:** Services Cables 28, 29, and 30.
-* **Breaker 30:** Services Cables 31 and 32.
+:::info Special Configuration: Module 13
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+Unlike the other modules which utilize a single breaker, **Module 13** is cross-wired across two breakers to handle higher current demands for the Library and Garage areas: **Breaker 26:** Services Cables 28, 29, and 30. And **Breaker 30:** Services Cables 31 and 32.
 
 ---
 
