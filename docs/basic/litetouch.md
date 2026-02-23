@@ -24,7 +24,7 @@ It has 6 independent dimming outputs. With 120V AC, and it had a capacity of 20A
 **Limitation:** These were designed primarily for incandescent and halogen bulbs. Using modern LEDs on these old modules often caused flickering because the "Dimmer" couldn't handle the low wattage of LED technology..
 
 
-### 2. Relay Module (Model 08-2200-01)
+### Relay Module (Model 08-2200-01)
 
 The 08-2200-01 is a 6-channel high-voltage switching station designed for non-dimmable loads.
 
@@ -37,6 +37,8 @@ Additionally the system used two power supply Model 08-8620-00. One was located 
 
 The other one was located, next to the Central Control Unit (Brain), in its own metal box, located in the upper left section of the electrical room. Right above the Main Panel breaker. This second power supply powered the Central Control Unit, as well as all the keypad/liteswitches of the house. 
 
+
+---
 
 ## Layout
 
@@ -55,9 +57,13 @@ The House used a total of fifteen relays, of which five were Relay Module (Model
 | Module 12 | Module 8 |
 | Module 13 | Module 9 |
 | Module 14 | Module 10 |
-| **System Power Supply** | Module 11 |
+| Power Supply | Module 11 |
 
 
+Module 4.1, 12, 13 & 14 were Relay Module (Model 08-2200-01), the rest were Dimmer modules
+
+
+---
 
 ## Wiring Map
 
@@ -106,10 +112,21 @@ The power supply located at the Bottom left box used to be fed by breaker 27 and
 This video was taken during the teardown of the LiteTouch system. It shows the original wiring harness and the state of the central control cabinet before the migration.
 
 
-<video width="100%" controls>
-  <source src="/img/litetouch.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<div style={{textAlign: 'center'}}>
+  <video 
+    controls 
+    style={{
+      maxWidth: '400px', 
+      width: '100%', 
+      borderRadius: '8px', 
+      boxShadow: '0 4px 8px rgba(0,0,0,0.2)'
+    }}
+  >
+    <source src="/img/litetouch.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <p><i>Legacy LiteTouch Cabinet - Vertical Overview</i></p>
+</div>
 
 
 ## Photo Documentation
