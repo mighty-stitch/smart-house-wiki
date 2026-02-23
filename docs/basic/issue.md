@@ -4,7 +4,8 @@ sidebar_position: 5
 title: Issue
 ---
 
-# Why Migrate? The Fall of LiteTouch
+# The Fall of LiteTouch
+## Why Migrate? 
 
 The decision to decommission the LiteTouch system was not based on a desire for "new gadgets," but on the total operational failure of the home's original infrastructure. After 40 years of service, the system reached a point where it was no longer operational, nor maintainable.
 
