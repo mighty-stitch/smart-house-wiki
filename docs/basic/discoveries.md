@@ -34,7 +34,7 @@ In the lower right box, there is an additional unnumbered cable marked with a pi
 
 ---
 
-## Master Bedroom Legacy Modifications
+## Master Bedroom Modifications
 
 At some point in the home's history, the Master Bedroom underwent a partial "de-coupling" from the LiteTouch system. It appears that a previous renovation bypassed the centralized control logic for certain fixtures in favor of traditional, direct-wired switches.
 
