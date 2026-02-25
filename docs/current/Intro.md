@@ -1,101 +1,86 @@
 ---
 id: Intro
 sidebar_position: 1
-title: Intro
+title: Intro 
 ---
 
-# Electrical Overview
+# System Overview
 
-Before understanding how this house works, it helps to understand how electricity normally works in a typical home. We’ll start simple.
+The transition from LiteTouch to this modern stack represents more than just a hardware swap; it is a complete change in how the infraestructure of the house. I moved from a single, central brain to a distributed network where every component is replaceable, standardized, and smart.
 
----
+## Recap: LiteTouch 
 
-## How Electricity Works in a Normal House
-
-Electricity comes from the utility company into your **main electrical panel**. From there, it travels through wires to outlets, switches, and lights.
-
-For a basic light circuit, there are three important parts:
-
-- **Hot wire** – brings electricity from the panel to the device.
-- **Neutral wire** – carries electricity back to the panel.
-- **Ground wire** – safety path (we won’t focus on it for now).
-
-
-Electricity needs a complete loop to work. If the loop is complete, the light turns on. If the loop is broken, the light turns off. In a traditional house, the **wall switch physically breaks the hot wire**, which in turn breaks the loop. When the loop is not completed the lights are off
-
-When you flip the switch:
-- ON → it connects the hot wire → electricity flows → light turns on.
-- OFF → it disconnects the hot wire → electricity stops → light turns off.
-
----
-
-### Traditional Wiring diagram
-
-The important thing to understand: **The wall switch directly controls the power going to the light.** There is no computer. No brain. No network. Just a mechanical break in the hot wire Simple. Reliable. Very old-school.
-
-
-![Basic Wiring Diagram](/img/normal_elec_diagram.png)
-
-
-:::info 
-Notice only the **Hot** cable is disconnected to break the loop
+:::note 
+Before I introduce the new components of the house, here a small recap of litetouch. If you want to know more about how litetouch worked you can check the **[electrical overview page.](basic/electrical-overview.md)** 
 :::
 
----
-
-## How Electricity Works with LiteTouch
-
-Now things get interesting. In a LiteTouch system, the wall switches did **not** directly control the electricity going to the light. Instead of each switch breaking the hot wire, the house was wired differently.
-
-### AC vs. DC: The Two Worlds
-To understand LiteTouch, you have to understand the two types of "juice" running through the walls:
-
-1.  **AC (Alternating Current - 110v):** This is the "heavy lifting" electricity. It powers your fridge, your microwave, and your lightbulbs. It is powerful and can be dangerous.
-2.  **DC (Direct Current - 24v):** This is low voltage electricity. It’s the same kind used by your phone charger or a battery (like duracell). It’s safe to touch at just 24V.
+Originally, the house relied on a **Central Control Unit (CCU)**. You can think of this as a 40-year-old mainframe sitting in a dark closet. It was a "Command and Control" architecture:
+* **The Keypads:** These weren were the switched; they acted as dumb buttons. When click they sent a raw electrical signal through cables back to the CCU.
+* **The Brain:** The CCU received that signal, looked up a programmed "scene," and decided which lights to turn on.
+* **The Modules:** Large, heavy dimmer racks that took orders from the brain. They did the heavy lifting of allowing electricity to flow.
 
 
-### LiteTouch Components:  
+### LiteTouch Diagram
 
-#### The Switches (The Keypads)
-In a normal house, the switches are dangerous to touch inside because they carry **110v AC** (high voltage). In a LiteTouch house, the switches only carried **24v DC** (low voltage). Think of these like a doorbell button or a computer keyboard. They didn't "clunk"—they just sent a tiny electrical "click" to the brain.
-
-This is how they were wired: 
-* **Positive (+):** Provides the power to the keypad (so the buttons can light up).
-* **Negative (-):** Completes the power loop for the keypad.
-* **Data:** This is the "messenger." When you press a button, a digital signal is sent down this wire to tell the brain exactly which button was pushed.
-
-#### The Control Panel (The Brain)
-Every single keypad wire in the house traveled back to a central "Control Box". Inside this box was the **CCU (Central Control Unit)**.  This was the brain. It would listen for a "click" from a switch and then decide which light should turn on.
-
-#### The Relays (The Muscle)
-The brain didn't actually touch the high-voltage electricity. Instead, it sent a signal to a **Relay**. A relay is an electromagnetic switch. When the brain tells it to, it magnetically "claps" two metal plates together to complete the 110v loop for the lightbulb.
-
-
-In short:
-
-Button → Control Panel → Relay → Light
-
----
-
-### LiteTouch Wiring diagram
-
-As shown in the diagram below, the picture becomes a little more complicated due to the addition of new components. The switch was replaced for a relay instead, and the relay is controlled by the brain which is listining to the keypad/switches all around the house. 
-
+In the old system, every button was physically tied to a central computer in a closet by a specific wire. When a button was  pressed, it sent an electrical pulse down that wire. The central computer received that pulse, looked up what it was supposed to do, and then told a large dimmer/relay box to send power to the light bulb. If that one central computer was off or broken, the button press went nowhere.
 
 ![Basic Wiring Diagram](/img/litetouch_elec_diagram.png)
 
+---
 
-#### Comparison table
+## Introducing the New Crew
 
-To understand why this house is "unconventional," it helps to see exactly how a LiteTouch system differs from the standard light switches you find in a typical home.
+Now, the house no longer runs on LiteTouch but rather a series of independent components that work with each other to turn the lights on and off. Instead of a proprietary "closed" system, these devices communicate using standard Wi-Fi and network protocols. To understad the new system, first I need to introduce the new parts running the show
 
-| Feature | **Traditional Switch** | **LiteTouch Keypad** |
+
+### **Home Assistant (The Brain)**
+I am running Home Assistant as the central nervous system. Technically, it is an open-source automation platform that acts as a **Local Server**. It doesn't live in "the cloud"; it lives inside the house. It maintains a database of every light's status and runs the logic that tells the Shelly relays when to click.
+
+#### **Shelly Pro Relays (The Muscle)**
+These are industrial-grade switches mounted on DIN rails inside the main electrical boxes. Technically, these are **ESP32-based smart relays**. They are the bridge between the digital world and the high-voltage (120V) world. They connect to the house network via Wi-Fi or Ethernet and handle the actual heavy lifting of cutting power to the light bulbs.
+
+### **ESP32-CYD (The Face)**
+The "Cheap Yellow Display" (CYD) is a small touchscreen powered by an **ESP32 microcontroller**. I use these to replace the old physical keypads. They run a custom interface that sends commands over the network. Instead of a physical button click, they send a digital "message" saying, "Someone touched the Kitchen button."
+
+
+### Smart House Diagram
+
+Now, when I tap a button on the CYD touchscreen, the screen sends a wireless message through the house. Home Assistant (the "Translator") hears that message and knows exactly which light I want to turn on. It then sends its own message to a Shelly switch in the electrical panel, telling it to click the power on. Instead of one long wire and one central brain, the devices now talk to each other like people over a radio.
+
+
+![Basic Wiring Diagram](/img/smart_house_elec_diagram.png)
+
+
+### **Explain It Like I’m Five**
+Imagine the house is a busy restaurant, and every light in the house is a meal that needs to be cooked:
+
+* **The CYD is the Waiter:** He stands at your table with a notepad. He doesn’t cook the food; he just listens to what you want and writes it down.
+* **The Shelly is the Cook:** He stays in the kitchen. He is the only one who can actually turn on the stove and get the job done, but he never talks to the customers. He just waits for a ticket to appear.
+* **Home Assistant is the Head Chef:** He sits in the middle and runs the show. When the Waiter (CYD) brings him a note, the Chef reads it and tells the Cook (Shelly) exactly what to do.
+
+
+### A word on the Power Supply
+In the earlier, litetouch diagram, the the Power Supply (PWS) was not included. This made it look like the central computer was magically powering the keypads. 
+
+In reality, the old LiteTouch had a power supply connected to it, but I did not see the need to add it to the diagram. Now that I have removed that litetouch central computer, I have to be more explicit about how components get their energy. I use dedicated **5V DC Power Supplies** to give the CYD touchscreens the energy they need to stay awake and connected. 
+
+I’ve included the PWS in the new diagram above because, without it the "Messenger" (the CYD) wouldn't have the energy to talk to the "Manager" (Home Assistant).
+
+
+---
+
+## Summary
+### Out with the Old, In with the New
+I created this table to show how I mapped the old functions to the new infrastructure:
+
+| Feature | LiteTouch (Before) | Shelly + HA + CYD (Now) |
 | :--- | :--- | :--- |
-| **Electricity Type** | 110v AC (High Voltage) | 24v DC (Low Voltage) |
-| **Wiring Style** | "In-Line" (Breaks the power loop) | "Signal" (Sends a digital message) |
-| **What happens inside?** | A mechanical click connects metal. | A computer chip sends a data packet. |
-| **Safety** | Can give a nasty shock if handled live. | Safe to touch (like a phone charger). |
-| **Location** | Must be near the lights it controls. | Can be anywhere (all wires go to the brain). |
+| **Brain** | Central Control Unit (Proprietary) | Home Assistant (Open Source) |
+| **Switching** | 6-Channel Dimmer Modules | Shelly Pro DIN-Rail Relays |
+| **User Interface** | Physical Multi-button Keypads | CYD Touchscreens & Mobile App |
+| **Communication** | LiteTouch Data Bus (3-wire) | WiFi |
+| **Monitoring** | None (Blind Switching) | Real-time Wattage & Power Stats |
+| **Compatibility** | Incandescent / Halogen only | Native LED Support |
 
 
 

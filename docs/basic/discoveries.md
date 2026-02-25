@@ -12,10 +12,10 @@ During the process of auditing the 70 circuits and migrating the system, several
 
 ## Bathroom Outlets
 
-A significant discovery was made regarding the bathroom outlets. Unlike modern electrical standards—where bathrooms are typically isolated (one breaker per bathroom), **every bathroom outlet in this house is tied to a single circuit breaker.**
+A significant discovery was made regarding the bathroom outlets. Unlike modern electrical standards—where bathrooms are typically isolated (one breaker per bathroom), **every bathroom outlet in this house is tied to a single circuit breaker. Breaker 18 is tied to all bath outlets**
 
 :::note Technical Implications
-A high-amp load (such as a hair dryer or space heater) used in one bathroom has the potential to trip the breaker for every bathroom in the entire house. 
+A high-amp load (such as a hair dryer or space heater) used in one bathroom has the potential to trip the breaker for every bathroom in the entire house.
 :::
 
 **Also to be noted is that none of the bathrooms outlets are GFCI outlets**.

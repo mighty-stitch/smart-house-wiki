@@ -1,5 +1,6 @@
 ---
 id: esp32-cyd
+sidebar_position: 4
 title: ESP32 CYD Display
 ---
 

@@ -1,5 +1,6 @@
 ---
 id: home-assistant
+sidebar_position: 3
 title: Home Assistant
 ---
 
