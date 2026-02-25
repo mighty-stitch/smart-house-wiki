@@ -8,6 +8,8 @@ title: Intro
 
 The transition from LiteTouch to this modern stack represents more than just a hardware swap; it is a complete change in how the infraestructure of the house. I moved from a single, central brain to a distributed network where every component is replaceable, standardized, and smart.
 
+---
+
 ## Recap: LiteTouch 
 
 :::note 
@@ -36,7 +38,7 @@ Now, the house no longer runs on LiteTouch but rather a series of independent co
 ### **Home Assistant (The Brain)**
 I am running Home Assistant as the central nervous system. Technically, it is an open-source automation platform that acts as a **Local Server**. It doesn't live in "the cloud"; it lives inside the house. It maintains a database of every light's status and runs the logic that tells the Shelly relays when to click.
 
-#### **Shelly Pro Relays (The Muscle)**
+### **Shelly Pro Relays (The Muscle)**
 These are industrial-grade switches mounted on DIN rails inside the main electrical boxes. Technically, these are **ESP32-based smart relays**. They are the bridge between the digital world and the high-voltage (120V) world. They connect to the house network via Wi-Fi or Ethernet and handle the actual heavy lifting of cutting power to the light bulbs.
 
 ### **ESP32-CYD (The Face)**
