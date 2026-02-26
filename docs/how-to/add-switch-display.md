@@ -64,17 +64,35 @@ The instruction below show you how to both install Homebrew and python
 
 1.  Open your **Terminal** (Search for "Terminal" on your Mac).
 2.  Paste this line and hit Enter to install Homebrew:
-    `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+```js
+ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 3.  Once that finishes, type this to install Python:
-    `brew install python`
+
+```js
+ brew install python
+```
+   
 4. After installation, verify it works by opening Terminal and running:
-    `python3 --version`
+
+```js
+ python3 --version
+```
+    
 
 ### Create a Virtual Environment
 In your Terminal, we need to create and enter your private "sandbox":
-1.  Create the folder: 
-    `python3 -m venv esphome_env`
+1.  Create the folder:
+
+```js
+ python3 -m venv esphome_env
+```
+   
 2.  Enter the folder (Activate it): 
+
+```js
+ source esphome_env/bin/activate
+```
     `source esphome_env/bin/activate`
     *(You will now see `(esphome_env)` appear at the start of your typing line. This means you are inside the safe zone!)*
 
@@ -89,7 +107,7 @@ Now that you are inside your safe space, install the tool:
 
 open -a "Visual Studio Code" .
 
----
+
 
 
 
