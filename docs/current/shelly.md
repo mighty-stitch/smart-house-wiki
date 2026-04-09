@@ -11,13 +11,14 @@ First lets me introduce Shelly which is not a product nor a framework, but a com
 
 Shelly makes a lot of products, however for the purpose of this house you only need to know about the **Shelly Pro 4PM** 
 
+---
 
 ## Shelly Pro 4PM
 
 The **Shelly Pro 4PM** is the component that actually handles the electricity. It is a professional-grade, 4-channel smart relay designed to live inside your electrical panel.
 
 
-:::note
+:::tip
 You can think of shelly a smart switch / smart relay, or the muscle of the system. It handles the actual work of allowing electricity to flow, turning the lights on. Or to block the flow of electricity, turning the lights off
 :::
 
@@ -29,7 +30,7 @@ The "Pro" series is Shelly’s top-tier hardware, built specifically for reliabi
 
 **Power and Capacity** This device can handle a lot of weight. It supports up to **16A per channel**, with a total device limit of **40A**. It operates on standard house voltage (110V - 240V AC), making it a perfect one-to-one replacement for the old LiteTouch modules.
 
-**Connectivity** Reliability is the priority here. The 4PM supports **Wi-Fi** (2.4GHz), **Bluetooth** (for easy setup), and most importantly, **LAN (Ethernet)**. By plugging an internet cable directly into the Shelly, we ensure the lights respond instantly without worrying about Wi-Fi interference.
+**Connectivity and Reliability**  is the priority here. The 4PM supports **Wi-Fi** (2.4GHz), **Bluetooth** (for easy setup), and most importantly, **LAN (Ethernet)**. By plugging an internet cable directly into the Shelly, we ensure the lights respond instantly without worrying about Wi-Fi interference.
 
 **Intelligence and Safety** Inside is an ESP32 processor with 8MB of flash memory. It isn't just a "dumb" switch; it has built-in protection against over-powering, over-voltage, and over-heating. If something goes wrong with a light bulb, the Shelly senses it and shuts down that specific circuit automatically.
 
