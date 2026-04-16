@@ -148,6 +148,10 @@ The number tells you how many buttons will appear on the screen.
 
 Open your chosen file in VS Code. Look for the `substitutions:` block at the very top. This is the **only** part you need to edit.
 
+## adding to HA 
+
+Very important step, otherwise it won't work
+
 ```yaml
 substitutions:
   # 1. Put the Home Assistant names of your lights here:
@@ -157,3 +161,5 @@ substitutions:
   
   # 2. Give this specific screen a unique ID name:
   device_name: "room-2-display"
+
+```

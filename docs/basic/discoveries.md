@@ -40,3 +40,13 @@ At some point in the home's history, the Master Bedroom underwent a partial "de-
 
 It is highly probable that **Cable 68** originally belonged to one of these Master Room fixtures before the wiring was redirected.
 
+---
+
+## Breaker 30 & 28
+
+Turning off breaker 30, will not fully kill power in cable **B30**. I noticed that there is still a 12V current when breaker 30 is off. In order to fully kill power in cable B30, breaker 28 also needs to be off. Only then it will be safe to touch. It does not act both ways, meaning turning off breaker 28 will be enough to kill power in cable B28
+
+:::danger
+When working with cable B30, make sure to turn off both Breaker 30 & Breaker 28, turning off only Breaker 30, will still leave cable B30 hot at 12V
+:::
+
