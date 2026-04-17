@@ -55,7 +55,27 @@ Shelly gives you full **Independence**.
 * **No CYD Screen?** You can still use the physical buttons on the front of the Shelly unit in the electrical panel or the app on your phone.
 
 
----
+#### What can this "Brain" actually do?
+
+##### 1. Real-Time Energy Monitoring
+Each of the 4 channels on the Pro 4PM acts as an individual power meter. This allows for precise tracking and safety overhead:
+
+| Feature | Description |
+| :--- | :--- |
+| **Live Consumption** | View exactly how many Watts ($W$) a circuit is drawing in real-time. |
+| **Historical Data** | View logs to see which circuits are costing the most over a week or month. |
+| **Safety Limits** | Set a "Max Power" limit; if a device malfunctions, Shelly kills the circuit before the breaker trips. |
+
+###### 2. Local Automations & Schedules
+Because the Shelly has an internal clock and GPS awareness, it handles time-based tasks without needing an external "brain":
+
+* **Schedules:** Lights can turn on at 7:00 AM and off at 11:00 PM daily.
+* **Celestial Cycles:** Using GPS coordinates, porch lights trigger based on actual **sunset/sunrise** times rather than a static clock.
+* **Auto-Off Timers:** Perfect for bathroom fans or heaters; the Shelly can auto-kill the circuit after a set duration (e.g., 15 minutes).
+
+
+**You can set up automation and check power comsuption either on the shelly app directly or in Home Assistant**.
+
 
 :::tip The "Safety Net"
 Because Shelly is so independent, it acts as a safety net for the house. I use Home Assistant and the CYD screens to make the house *convenient*, but Shelly makes sure the house is *reliable*.
