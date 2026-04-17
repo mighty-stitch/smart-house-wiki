@@ -8,10 +8,10 @@ title: Home Assistant
 
 While the Shelly Pro 4PM is the "muscle", **Home Assistant (HA)** is the "local brain," the central nervous system of the entire house. It is the command center that allows all our different pieces of hardware to talk to each other.
 
-### What is Home Assistant?
+## What is Home Assistant?
 Home Assistant is an open-source hub that lives on a dedicated computer in the house (in this case a Raspberry Pi). Its primary job is **unification**. Instead of having ten different apps for ten different light bulbs, HA brings everything into one single interface.
 
-#### Why do we need HA if Shelly is already "Smart"?
+### Why do we need HA if Shelly is already "Smart"?
 It’s a fair question: If Shelly can handle its own schedules and apps, why add another layer?
 
 The answer is the **CYD (Cheap Yellow Display)**.
@@ -33,19 +33,19 @@ Because Home Assistant is a master translator, I can add new "experts" to the me
 
 ---
 
-### How to Access & Manage HA
+## How to Access & Manage HA
 
 You can access Home Assistant from any web browser on your local network:
 **Link:** [http://homeassistant.local:8123](http://homeassistant.local:8123)
 
-#### Small overview of the Website
+### Small overview of the Website
 
 The interface is very simple. It is split into two main areas: the **Sidebar** (your navigation) and the **Dashboard** (your controls).
 
-##### 1. The Dashboard (Home)
+#### 1. The Dashboard (Home)
 This is your main "Overview" tab. It’s the visual control center where you see your light switches, power usage graphs, and the status of the house at a glance.
 
-##### 2. The Sidebar
+#### 2. The Sidebar
 While there are many options, you really only need to care about two:
 * **Home (Overview):** Shows all the lights in the house grouped by house rooms.
 * **Settings:** The "Engine Room" of the house.
@@ -67,19 +67,19 @@ One of the best things about HA is that it runs **locally**. Your data doesn't g
 
 ---
 
-### Expanding the Empire: What else can HA do?
+## Expanding the Empire: What else can HA do?
 
 Controlling the Shelly Pro 4PM is just the beginning. Home Assistant acts as the "Glue" that lets you add almost any smart device to the house and make them work together.  Because Home Assistant supports over 2,000 different brands, we can integrate almost anything:
 
-#### 1. Voice Control
+### 1. Voice Control
 You can bridge your Shelly and CYD setup into **Apple HomeKit**, **Google Assistant**, or **Alexa**. This adds a third way to control the house: if you aren't near a CYD screen and don't have your phone, you can just use your voice.
 
-#### 2. Smart Automations
+### 2. Smart Automations
 This is where the house actually becomes "smart." You can create logic that handles the boring stuff for you:
 * **Master Switches:** One tap on a CYD screen can trigger a "Goodbye" routine that kills every Shelly relay and turns off the TV.
 * **Occupancy:** Use motion sensors to turn on the hallway lights if you walk by at night.
 
-#### 3. Security
+### 3. Security
 You can integrate door sensors or cameras. If a door opens while you aren't home, Home Assistant can tell the Shelly to flash every light in the house or send a notification to your phone.
 
 :::info One App to Rule Them All
