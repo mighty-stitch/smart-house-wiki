@@ -47,9 +47,7 @@ To keep the story simple, I have been portraying Shelly as the "muscle" that doe
 ### A Brain of Its Own
 Every Shelly Pro 4PM has its own internal computer (an ESP32 processor). This means it doesn't actually *need* Home Assistant or a CYD screen to function. It has its own memory and its own "mini-website" built right into the device. 
 
-Even without the custom screens on the walls, you can use the official Shelly App on your phone. This allows the Shelly to act as a **Remote Switch**. Whether you are sitting on the couch or away from home, you can open the app and click a button to toggle the lights. The Shelly receives that command directly and executes it instantly.
-
-Shelly gives you full **Independence**. 
+Even without the custom screens on the walls, you can use the official Shelly App on your phone. This allows the Shelly to act as a **Remote Switch**. Whether you are sitting on the couch or away from home, you can open the app and click a button to toggle the lights. The Shelly receives that command directly and executes it instantly. Shelly gives you full **Independence**. 
 
 * **No Home Assistant?** No problem. The Shelly can still run schedules (like turning the porch lights on at sunset) all by itself.
 * **No CYD Screen?** You can still use the physical buttons on the front of the Shelly unit in the electrical panel or the app on your phone.
@@ -76,9 +74,6 @@ Because the Shelly has an internal clock and GPS awareness, it handles time-base
 * **Schedules:** Lights can turn on at 7:00 AM and off at 11:00 PM daily.
 * **Celestial Cycles:** Using GPS coordinates, porch lights trigger based on actual **sunset/sunrise** times rather than a static clock.
 * **Auto-Off Timers:** Perfect for bathroom fans or heaters; the Shelly can auto-kill the circuit after a set duration (e.g., 15 minutes).
-
-
-
 
 
 :::tip The "Safety Net"

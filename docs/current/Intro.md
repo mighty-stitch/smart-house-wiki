@@ -64,7 +64,7 @@ Imagine the house is a busy restaurant, and every light in the house is a meal t
 ### A word on the Power Supply
 In the earlier, litetouch diagram, the the Power Supply (PWS) was not included. This made it look like the central computer was magically powering the keypads. 
 
-In reality, the old LiteTouch had a power supply connected to it, but I did not see the need to add it to the diagram. Now that I have removed that litetouch central computer, I have to be more explicit about how components get their energy. I use dedicated **5V DC Power Supplies** to give the CYD touchscreens the energy they need to stay awake and connected. 
+In reality, the old LiteTouch had a power supply connected to it, but I did not see the need to add it to the diagram. Now that I have removed that litetouch central computer, I have to be more explicit about how components get their energy. I use dedicated **24V DC Power Supply** for the low voltage cable, and then I added a converter to decrease the 24V to 5V which is what the CYD touchscreens need. 
 
 I’ve included the PWS in the new diagram above because, without it the "Messenger" (the CYD) wouldn't have the energy to talk to the "Manager" (Home Assistant).
 
