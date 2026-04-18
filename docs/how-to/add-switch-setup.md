@@ -1,10 +1,11 @@
 ---
-id: add-switch-display
-title: Add / Configure a Switch Display
+id: add-switch-setup
+sidebar_position: 1
+title: Add a Switch SetUp
 ---
 
 
-# Transforming a CYD into a Light Switch
+# Add a Switch SetUp
 
 This guide will walk you through how to take a raw ESP32-CYD (Cheap Yellow Display) and flash it with the custom layouts to turn it into a smart light switch for your home.
 
@@ -200,43 +201,3 @@ esphome run name_of_file.yaml
 
 
 
-
-
-
-
-
-
-
-## 4. Choosing Your Layout
-
-I have designed several layouts. You just need to pick the one that fits the room.
-
-
-
----
-
-
-
-open -a "Visual Studio Code" .
-
-
-
-## 5. Customizing the "Recipe" (The YAML)
-
-Open your chosen file in VS Code. Look for the `substitutions:` block at the very top. This is the **only** part you need to edit.
-
-## adding to HA 
-
-Very important step, otherwise it won't work
-
-```yaml
-substitutions:
-  # 1. Put the Home Assistant names of your lights here:
-  light_1_entity: "switch.8_room_2_light"
-  light_2_entity: "switch.24_room_2_outlet"
-  light_3_entity: "switch.9_up_hall_single_lgt"
-  
-  # 2. Give this specific screen a unique ID name:
-  device_name: "room-2-display"
-
-```

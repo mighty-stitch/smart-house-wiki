@@ -1,0 +1,151 @@
+---
+id: add-switch-flash
+sidebar_position: 2
+title: Add a Switch Flash
+---
+
+# Flashing the CYD
+
+If your enviroment all set up, then you are ready to push the code to the hardware (If you still don't have all the tools and software installed, then check the setup page)
+
+Flashing the CYD is very easy, you just need to follow these steps carefully to ensure the screen connects and communicates with Home Assistant.
+
+---
+
+## 1. Hardware Connection
+Connect the CYD to your laptop using a USB cable. 
+
+:::warning Cable Matters
+Use the **USB cable that came with the CYD**. Many generic micro-USB or USB-C cables are "charge only" and do not transfer data. If your computer doesn't "see" the device, the cable is likely the culprit.
+:::
+
+---
+
+## 2. Activate env
+
+If you just follow up the set up steps, then most likely your env is already activated, if not then activate it
+
+**Activate it:**
+* **Mac/Linux:** `source venv/bin/activate`
+* **Windows:** `.\venv\Scripts\activate`
+
+You will know it worked if you see `(esphome_env)` appear at the start of your terminal prompt.
+
+---
+
+## 3. Open Project in VS Code
+Before editing any code, open the **entire project folder** in Visual Studio Code. This allows you to see the file structure and edit the secrets and layouts easily.
+
+1. Open VS Code.
+2. Go to **File > Open Folder...**
+3. Select the `smart-home-main` folder you extracted earlier.
+
+---
+
+## 4. Configure Your Secrets
+The `secrets.yaml` file acts as a private vault for your credentials so you don't have to type them into every single layout file.
+
+1. Locate `secrets.yaml` in the VS Code file explorer.
+2. Fill in your **Wi-Fi SSID**, **Password**, **Home Assistant API keys**, **ota & ap password**. 
+3. **Save the file.** (If you don't save, the flash will fail or the device won't connect to Wi-Fi).
+
+---
+
+## 5. Choose and Customize Your Layout
+I have provided several layout templates. You don't need to build the UI; you just need to point the buttons to the right lights.
+
+#### **Room & Sleep Layouts**
+The number tells you how many buttons will appear on the screen.
+* **Room 1–5 (`room_1.yaml` etc.):** Standard layouts for kitchens, halls, or living rooms.
+* **Sleep 1–5 (`sleep_room_1.yaml` etc.):** These are exactly like the room layouts, but they have a **"Go to Bed" feature**. When you tap the Moon Icon, you can turn the backlight completely off so the room stays dark while you sleep.
+
+#### **Specialized Layouts**
+* **LED-strip_room_4.yaml:** Used specifically for rooms with color-changing LED strips.
+* **header_room_4.yaml:** A layout with a dedicated title bar at the top for room info.
+
+
+After you have selected a layout, there is only two things that you will need to modify. Look for the `substitutions:` block. This is the **only** part you need to edit.
+
+```yaml
+substitutions:
+  # 1. Put the Home Assistant names of your lights here:
+  light_1_entity: "switch.8_room_2_light"
+  light_2_entity: "switch.24_room_2_outlet"
+  light_3_entity: "switch.9_up_hall_single_lgt"
+  
+  # 2. Give this specific screen a unique ID name:
+  device_name: "room-2"
+
+```
+
+The **device name** is the ID of the CYD, if you are creating a brand new switch you can set up its name. And then the **Entity IDs** are the IDs of the lights, these already exist. You can find them at Home assistant or in the following docuements:
+ - [House CYD Switches](https://docs.google.com/document/d/1Cs_ppgyfBQ-Bjx7D-ETj8rokBppjL9qpJMkcFogGsUU/edit?tab=t.0)
+ - [Lights ID](https://docs.google.com/document/d/1nRzYMH11AlQUqCqbYMbhCR5bK-ogHYTT7CRZLdtNlkc/edit?tab=t.0)
+
+---
+
+## 6. Run the code
+
+Next step is running the flash. At this point, your USB is plugged in, your `secrets.yaml` is saved, and you have customized your layout file, your env is activated. Now we execute the deployment.
+
+####  Navigate to the Right Place
+The terminal needs to be "inside" the folder where your layout files live. Since you downloaded the project as a ZIP, the `layouts` folder is located inside that main project directory. So first, in the terminal go into the downloaded folder, then go into layouts and then run: 
+
+```
+esphome run name_of_file.yaml
+```
+
+---
+
+## 7. Final Step: Authorizing in Home Assistant
+
+Even though the flash is 100% complete and the CYD is connected to your Wi-Fi, it won't be able to control anything until you **grant it permission** inside Home Assistant. This is a security measure to ensure random devices can't control your house.
+
+###  The Discovery Notification
+Once the CYD reboots after flashing, log into your Home Assistant dashboard.
+* Usually, a notification will appear in the bottom-left sidebar saying **"New devices discovered."**
+* Click **Check it out** to go to the Integrations page.
+
+###  Manual Configuration (If no notification appears)
+If you don't see a notification, follow this path:
+1. Go to **Settings** > **Devices & Services**.
+2. Look for the **ESPHome** card.
+3. You should see your new device (e.g., `kitchen-screen`) listed with a **CONFIGURE** button.
+
+### Granting Access
+1. Click **Configure**.
+2. Home Assistant will ask if you want to add the device. Click **Submit**.
+3. You may be asked for an **Encryption Key**. You can find this inside your `secrets.yaml` file under `api_key`.
+4. Assign the device to a **Area** (like "Kitchen" or "Living Room").
+5. **"Allow the device to perform Home Assistant actions"**
+
+:::danger Important
+You **must enable this toggle**. When enabled, it allows the CYD to send commands (like "Turn on the light") to Home Assistant. If this is left off, your screen will show the buttons, but tapping them will do absolutely nothing.
+:::
+
+---
+
+## The Result
+Once you click **Finish**, the "Brain" (HA) and the "Interface" (CYD) are officially linked. You can disconnect the CYD, it will turn off, however now that it has been flashed, once it gets powered again, it will automatically connect to the wifi and be link to Home Assistant. 
+
+:::success System Online
+Your CYD is now a fully functional member of the house ecosystem. You can now unplug it from your laptop, mount it in the wall, and power it via the 5V converter.
+:::
+
+---
+
+
+## Video Walkthrough
+
+If you prefer a visual guide, watch the video below for a complete walkthrough of the hardware setup, flashing process, and Home Assistant integration.
+
+<div style={{textAlign: 'center', margin: '2rem 0'}}>
+  <iframe 
+    src="https://drive.google.com/file/d/1m3ppJAW75ivlq-otqNB1AGdIgAi9jNZS/preview" 
+    width="100%" 
+    height="480" 
+    allow="autoplay"
+    style={{border: 'none', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}
+  ></iframe>
+</div>
+

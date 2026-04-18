@@ -1,8 +1,6 @@
 ---
 id: System Integration
-title: What Happens When You Press a Switch
----
-
+title: System Integration
 ---
 
 # System Integration
