@@ -12,7 +12,7 @@ Flashing the CYD is very easy, you just need to follow these steps carefully to 
 
 ---
 
-## 1. Hardware Connection
+### 1. Hardware Connection
 Connect the CYD to your laptop using a USB cable. 
 
 :::warning Cable Matters
@@ -21,7 +21,7 @@ Use the **USB cable that came with the CYD**. Many generic micro-USB or USB-C ca
 
 ---
 
-## 2. Activate env
+### 2. Activate env
 
 If you just follow up the set up steps, then most likely your env is already activated, if not then activate it
 
@@ -33,7 +33,7 @@ You will know it worked if you see `(esphome_env)` appear at the start of your t
 
 ---
 
-## 3. Open Project in VS Code
+### 3. Open Project in VS Code
 Before editing any code, open the **entire project folder** in Visual Studio Code. This allows you to see the file structure and edit the secrets and layouts easily.
 
 1. Open VS Code.
@@ -42,7 +42,7 @@ Before editing any code, open the **entire project folder** in Visual Studio Cod
 
 ---
 
-## 4. Configure Your Secrets
+### 4. Configure Your Secrets
 The `secrets.yaml` file acts as a private vault for your credentials so you don't have to type them into every single layout file.
 
 1. Locate `secrets.yaml` in the VS Code file explorer.
@@ -51,7 +51,7 @@ The `secrets.yaml` file acts as a private vault for your credentials so you don'
 
 ---
 
-## 5. Choose and Customize Your Layout
+### 5. Choose and Customize Your Layout
 I have provided several layout templates. You don't need to build the UI; you just need to point the buttons to the right lights.
 
 #### **Room & Sleep Layouts**
@@ -84,7 +84,7 @@ The **device name** is the ID of the CYD, if you are creating a brand new switch
 
 ---
 
-## 6. Run the code
+### 6. Run the code
 
 Next step is running the flash. At this point, your USB is plugged in, your `secrets.yaml` is saved, and you have customized your layout file, your env is activated. Now we execute the deployment.
 
@@ -97,22 +97,22 @@ esphome run name_of_file.yaml
 
 ---
 
-## 7. Final Step: Authorizing in Home Assistant
+### 7. Final Step: Authorizing in Home Assistant
 
 Even though the flash is 100% complete and the CYD is connected to your Wi-Fi, it won't be able to control anything until you **grant it permission** inside Home Assistant. This is a security measure to ensure random devices can't control your house.
 
-###  The Discovery Notification
+####  The Discovery Notification
 Once the CYD reboots after flashing, log into your Home Assistant dashboard.
 * Usually, a notification will appear in the bottom-left sidebar saying **"New devices discovered."**
 * Click **Check it out** to go to the Integrations page.
 
-###  Manual Configuration (If no notification appears)
+####  Manual Configuration (If no notification appears)
 If you don't see a notification, follow this path:
 1. Go to **Settings** > **Devices & Services**.
 2. Look for the **ESPHome** card.
 3. You should see your new device (e.g., `kitchen-screen`) listed with a **CONFIGURE** button.
 
-### Granting Access
+#### Granting Access
 1. Click **Configure**.
 2. Home Assistant will ask if you want to add the device. Click **Submit**.
 3. You may be asked for an **Encryption Key**. You can find this inside your `secrets.yaml` file under `api_key`.
